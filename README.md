@@ -5,20 +5,20 @@ Documentação do container Wordpress com Mysql(Em máquina Linux):
 
 Para dar inicio ao nosso Container Docker com wordpress e Mysql iremos atualizar os pacotes da maquina Linux:
 
-apt-get update
+```apt-get update```
 
 Em seguida iremos instalar o Docker através do segunte comando:
 
-apt-get -y install docker.io
+```apt-get -y install docker.io```
 
 Após instalar o docker desta forma no linux, ele não vem com a ferramenta docker-compose, que iremos utilizar para configurar nosso container.
  Para instalação usamos o comando:
- sudo apt install docker-compose
+ ```sudo apt install docker-compose```
  e podemos verificar sua instalação com o comando:
- docker-compose --version
+ ```docker-compose --version```
 
 Agora para inicar nosso container primeiro criamos uma pasta:
-mkdir wordpress
+```mkdir wordpress```
 
 nesta pasta iremos criar nosso arquivo "docker-compose.yml", com as seguintes linhas de código:
 
@@ -51,3 +51,6 @@ services:
 volumes:
     db_data:
 ```
+
+
+docker-compose up -d
