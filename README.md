@@ -52,5 +52,7 @@ volumes:
     db_data:
 ```
 
+Finalmente vamos rodar o nosso container com o seguinte comando:
+```docker-compose up -d```
 
-docker-compose up -d
+E para verificar seu funcionamento acessamos através do https://localhost:80
