@@ -1,23 +1,29 @@
-# Tarefa02
-Tarefa do Estágio Compass Docker
+<h1 align="center"> Tarefa 02 do Estágio Compass.uol</h1>
+<center>
+<img src="docker.png" alt="Não Encontrado!" title="Docker" height="300" width="600"/>
+</center>
+<h3>Subindo uma aplicação Wordpress + DB Mysql utilizando Docker: instalação</h3>
+<!–# Tarefa 02 do Estágio Compass.uol Docker 
 
-Documentação do container Wordpress com Mysql(Em máquina Linux):
-
-Para dar inicio ao nosso Container Docker com wordpress e Mysql iremos atualizar os pacotes da maquina Linux:
+Para dar início ao nosso Container Docker com wordpress e Mysql iremos atualizar os pacotes da máquina Oracle Linux 8.6:
 
 ```apt-get update```
 
-Em seguida iremos instalar o Docker através do segunte comando:
+Em seguida, iremos instalar o Docker através do seguinte comando:
 
 ```apt-get -y install docker.io```
 
-Após instalar o docker desta forma no linux, ele não vem com a ferramenta docker-compose, que iremos utilizar para configurar nosso container.
+Após a instalação do docker será necessário instalar o docker-compose, pois é um conteúdo aparte do docker e que iremos utilizar para configurar o nosso container.
  Para instalação usamos o comando:
+ 
  ```sudo apt install docker-compose```
+ 
  e podemos verificar sua instalação com o comando:
+ 
  ```docker-compose --version```
 
-Agora para inicar nosso container primeiro criamos uma pasta:
+Para iniciar o nosso container primeiro criamos uma pasta no diretório /:
+
 ```mkdir wordpress```
 
 nesta pasta iremos criar nosso arquivo "docker-compose.yml", com as seguintes linhas de código:
@@ -52,7 +58,8 @@ volumes:
     db_data:
 ```
 
-Finalmente vamos rodar o nosso container com o seguinte comando:
+Por último, rodaremos o nosso container com o seguinte comando:
+
 ```docker-compose up -d```
 
 E para verificar seu funcionamento acessamos através do https://localhost:80
