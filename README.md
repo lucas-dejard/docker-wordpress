@@ -61,27 +61,45 @@ volumes:
 Os códigos que usamos nesse arquivo tem seu significado da seguinte forma:
 
 ```version: A versão do docker-compose```
+
 ```image: A imagem que vamos baixar do dockerhub```
+
 ```volumes: Pastas que serão criadas localmente ```
+
 ```db_data: volume e caminho da pasta que sera criada```
+
 ```restart: Define se se o container será reiniciado em caso de erro```
+
 ```enviroment: Lista as variaveis de ambiente utilizadas pelo container```
+
 ```MYSQL_ROOT_PASSWORD:Definimos uma senha para o usuário root```
+
 ```MYSQL_DATABASE: Nome do database que vamos criar```
+
 ```MYSQL_USER: Nome do usuário que terá acesso ao database```
+
 ```MYSQL_PASSWORD: Senha do usuário```
 
 Neste ponto você ja configurou o seu Mysql, agora pode seguir para configurar o Wordpress:
 
 ```wordpress: Serviço que vamos utilizar(WordPress)```
+
 ```depends_on: Cria a dependência entre o serviço do WordPress em relação ao banco de dados(db)```
+
 ```image: selecione a imagem do repositório do WordPress no dockerhub(utilizamos a latest, que é a versão mais nova disponível)```
+
 ```ports: Lista as portas que tem acesso da máquina local para o container criado```
+
 ```80:80: A porta da máquina local será a 80 e a porta da máquina do container será 80```
+
 ```restart: Define se se o container será reiniciado em caso de erro```
+
 ```environment: Lista as variaveis de ambiente utilizadas pelo container```
+
 ```WORDPRESS_DB_HOST: criamos o nome do Host para acessar ao MySql```
+
 ```WORDPRESS_DB_USER: criamos o nome do usuário para acessar o banco de dados no MySql```
+
 ```WORDPRESS_DB_PASSWORD: criamos a senha do usuário para acessar o banco de dados no MySql.```
 
 
